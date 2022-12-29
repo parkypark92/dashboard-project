@@ -11,16 +11,16 @@ html {
     height: 100%;
     --custom-blue: #1992d4;
     --card-color: rgb(255, 255, 255);
-    --main-background: rgb(182, 182, 182);
+    --main-background: #e2e8f0;
 }
 
 body {
     font-family: 'Roboto';
     min-height: 100%;
-    width: 1350px;
+    max-width: 1350px;
     margin: auto;
     display: grid;
-    grid-template: 1fr 5fr / minmax(250px, 1fr) 4fr;
+    grid-template: 150px 1fr / minmax(250px, 1fr) 4fr;
 }
 
 a {text-decoration: none;}
@@ -46,9 +46,22 @@ header > div {
 }
 
 .searchbar {
-    padding-right: 10px;
+    padding-left: 0;
+    padding-right: 100px;
     display: grid;
     grid-template-columns: 25px 1fr;
+    gap: 10px;
+}
+
+#search {
+    background-color: var(--main-background);
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+#search:focus {
+    border: 1px solid black;
 }
 
 .icon-list {
@@ -67,6 +80,8 @@ header > div {
 
 .header-buttons button {
     color: white;
+    font-size: 0.9em;
+    font-weight: 700;
     width: 90px;
     height: 40px;
     background-color: var(--custom-blue);
@@ -101,7 +116,7 @@ nav ul li {
 /* main content  */
 
 main {
-    background-color: #e2e8f0 ;
+    background-color: var(--main-background) ;
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
 }
@@ -109,6 +124,7 @@ main {
 .card {
     background-color: var(--card-color);
     border-radius: 8px;
+    box-shadow: 2px 4px 5px rgb(189, 189, 189);
 }
 
 .title {
@@ -117,23 +133,31 @@ main {
     margin-bottom: 10px;
 }
 
+.card p {
+    color: #636363
+}
+
     /* Your Projects  */
 
 .projects-container {
-    padding: 30px 15px;
+    padding: 30px 25px 30px 15px;
     grid-row: 1 / 3;
 }
 
 .projects {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    gap: 35px;
+    gap: 25px;
 }
 
 article {
-    height: 200px;
+    height: 206px;
+    width: 372px;
     padding: 30px 20px;
     font-size: 0.9em;
+    border-left: 8px solid #f0b429;
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 
     /* Announcements  */
@@ -144,6 +168,7 @@ article {
 
 .announcements {
     height: 300px;
+    width: 250px;
     font-size: 0.8em;
     padding: 30px;
 
@@ -155,11 +180,12 @@ article {
     /* Trending  */
  
 .trending-container {
-    padding: 5px 20px 0px 0px;
+    padding: 0px 20px 0px 0px;
 }
 
 .trending {
     height: 300px;
+    width: 250px;
     padding: 20px;
 
     display: grid;
