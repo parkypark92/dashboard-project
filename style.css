@@ -20,7 +20,7 @@ body {
     max-width: 1350px;
     margin: auto;
     display: grid;
-    grid-template: 150px 1fr / minmax(250px, 1fr) 4fr;
+    grid-template: 1fr 5fr / 1fr 4fr;
 }
 
 a {text-decoration: none;}
@@ -37,7 +37,7 @@ header {
     grid-column: 2 / 3;
 
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 1.5fr / 2fr 1fr;
     align-items: center;
 }
 
@@ -60,17 +60,54 @@ header > div {
     border-radius: 10px;
 }
 
-#search:focus {
-    border: 1px solid black;
-}
-
 .icon-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
 }
 
-.icon-list li {
-    text-align: right;
+.icon-list div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.icon-image {
+    height: 40px;
+    width: 40px;
+}
+
+.icon-list div p {
+    font-weight: bold;
+}
+.greetings {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-image {
+    background-image: url(/Images/pexels-chevanon-photography-1108099.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.greeting-image {
+    height: 70px;
+    width: 70px;
+}
+
+
+
+.hello {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.username {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
 }
 
 .header-buttons {
@@ -163,7 +200,7 @@ main {
 }
 
 article {
-    height: 206px;
+    height: 205px;
     width: 372px;
     padding: 30px 20px;
     font-size: 0.9em;
