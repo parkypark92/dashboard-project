@@ -81,6 +81,11 @@ header > div {
 .icon-list div p {
     font-weight: bold;
 }
+
+.icon-list .height-fix {
+    height: 25px;
+}
+
 .greetings {
     display: flex;
     align-items: center;
@@ -174,6 +179,7 @@ main {
     background-color: var(--card-color);
     border-radius: 8px;
     box-shadow: 2px 4px 5px rgb(189, 189, 189);
+    color: black;
 }
 
 .title {
@@ -241,6 +247,7 @@ article.card {
 
 .announcement-link {
     padding-top: 12px;
+    color: black;
 }
 
 .announcements div:not(:first-child) {
@@ -297,5 +304,13 @@ article.card {
 .trend-tag {
     font-weight: bold;
     font-size: 1em;
+}
+
+button:hover, .announcement-link:hover, .trending-link:hover, .project-icons img:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a9cda;
 }
 
