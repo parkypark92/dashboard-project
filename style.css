@@ -205,8 +205,22 @@ article {
     padding: 30px 20px;
     font-size: 0.9em;
     border-left: 8px solid #f0b429;
-    overflow:hidden;
-    text-overflow: ellipsis;
+}
+
+article h3 {
+    margin-bottom: 5px;
+}
+
+article.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
 }
 
     /* Announcements  */
