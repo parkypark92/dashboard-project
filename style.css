@@ -33,7 +33,9 @@ li {list-style: none;}
 header {
     background-color: white;
     padding: 0px 40px;
-    border-bottom: 1px solid black;
+    box-shadow: 0px 6px 4px -4px rgb(182, 182, 182);
+    position:relative;
+
     grid-column: 2 / 3;
 
     display: grid;
@@ -97,8 +99,6 @@ header > div {
     width: 70px;
 }
 
-
-
 .hello {
     font-weight: bold;
     font-size: 0.9em;
@@ -131,7 +131,7 @@ header > div {
 
 nav {
     font-weight: 700;
-    padding: 20px 0px 0px 15px;
+    padding: 20px 50px 0px 15px;
     background-color: var(--custom-blue);
     grid-row: 1 / 3;
 
@@ -218,13 +218,20 @@ article {
 .announcements {
     height: 300px;
     width: 250px;
-    font-size: 0.8em;
-    padding: 30px;
+    font-size: 0.7em;
+    padding: 20px 30px;
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
 }
 
+.announcement-link {
+    padding-top: 12px;
+}
+
+.announcements div:not(:first-child) {
+    border-top: 2px solid var(--main-background);
+}
 
     /* Trending  */
  
@@ -235,12 +242,46 @@ article {
 .trending {
     height: 300px;
     width: 250px;
-    padding: 20px;
+    padding: 20px 30px;
 
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
 
+.trending-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
+    font-size: 0.8em;
+}
 
+.trending-image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.trending-one {
+    background-image: url(/Images/alvan-nee-eoqnr8ikwFE-unsplash.jpg);
+}
+
+.trending-two {
+    background-image: url(/Images/charlesdeluvio-Mv9hjnEUHR4-unsplash.jpg);
+}
+
+.trending-three {
+    background-image: url(/Images/karsten-winegeart-oU6KZTXhuvk-unsplash.jpg);
+}
+
+.trending-four {
+    background-image: url(/Images/julio-bernal-WLGx0fKFSeI-unsplash.jpg);
+}
+
+.trend-tag {
+    font-weight: bold;
+    font-size: 1em;
+}
 
